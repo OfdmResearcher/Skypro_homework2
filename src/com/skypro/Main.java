@@ -21,7 +21,7 @@ public class Main {
         double weightOfTheFirstBoxer = 78.2; // kg
         double weightOfTheSecondBoxer = 82.7; // kg
         double totalWeightOfTwoBoxers = weightOfTheFirstBoxer + weightOfTheSecondBoxer;
-        double differenceBetweenTwoBoxers = weightOfTheFirstBoxer - weightOfTheSecondBoxer;
+        double differenceBetweenTwoBoxers = Math.abs(weightOfTheFirstBoxer - weightOfTheSecondBoxer);
         System.out.println("Task 2:");
         System.out.println("The total weight is: " + totalWeightOfTwoBoxers + " kg");
         System.out.println("The difference is: " + differenceBetweenTwoBoxers + " kg");
@@ -44,7 +44,7 @@ public class Main {
                 (iceCream * weightOfOneBoxOfIceCream) +
                 (eggs * weightOfOneEgg);
         //Total weight of the breakfast in kg
-        int totalWeightOfBreakfastInKilos = totalWeightOfBreakfastInGrams / 1000;
+        double totalWeightOfBreakfastInKilos = (double) totalWeightOfBreakfastInGrams / 1000;
         System.out.println("Task 3");
         System.out.println("Total weight of the breakfast in kg is: " + totalWeightOfBreakfastInKilos + " kg");
         System.out.println("-------------------------------------------");
@@ -58,24 +58,24 @@ public class Main {
         System.out.println("The number of days for diet in case of 250 gr per day: " + daysForLosingWeightInFirstCase);
         int daysForLosingWeightInSecondCase = (weightWhichTheSportsmanShouldLoseInKilos * 1000) / weightTheSportsmanShouldLosePerDayInSecondCase;
         System.out.println("The number of days for diet in case of 500 gr per day: " + daysForLosingWeightInSecondCase);
-        int averageNumberOfDays = (daysForLosingWeightInFirstCase + daysForLosingWeightInSecondCase) / 2;
+        int averageNumberOfDays =  (daysForLosingWeightInFirstCase + daysForLosingWeightInSecondCase) / 2;
         System.out.println("Average number of days for 7kg diet is: " + averageNumberOfDays);
         System.out.println("-------------------------------------------");
 
         //Task 5
-        double salaryOfMasha = 67760.0; // in rubles
-        double salaryOfDenis = 83690.0; // in rubles
-        double salaryOfKristina = 76230.0; // in rubles
+        int salaryOfMasha = 67760; // in rubles
+        int salaryOfDenis = 83690; // in rubles
+        int salaryOfKristina = 76230; // in rubles
 
         double incrementOfSalaryPerYear = 1.1;
 
-        double newSalaryOfMasha = salaryOfMasha * incrementOfSalaryPerYear;
-        double newSalaryOfDenis = salaryOfDenis * incrementOfSalaryPerYear;
-        double newSalaryOfKristina = salaryOfKristina * incrementOfSalaryPerYear;
+        int newSalaryOfMasha = (int) (salaryOfMasha * incrementOfSalaryPerYear);
+        int newSalaryOfDenis = (int) (salaryOfDenis * incrementOfSalaryPerYear);
+        int newSalaryOfKristina = (int) (salaryOfKristina * incrementOfSalaryPerYear);
 
-        double incrementOfMashaSalary = newSalaryOfMasha - salaryOfMasha;
-        double incrementOfDenisSalary = newSalaryOfDenis - salaryOfDenis;
-        double incrementOfKristinaSalary = newSalaryOfKristina - salaryOfKristina;
+        int incrementOfMashaSalary = (newSalaryOfMasha - salaryOfMasha) * 12;
+        int incrementOfDenisSalary = (newSalaryOfDenis - salaryOfDenis) * 12;
+        int incrementOfKristinaSalary = (newSalaryOfKristina - salaryOfKristina) * 12;
 
         System.out.println("Task 5");
         System.out.println("Маша теперь получает " + newSalaryOfMasha + " рублей. Годовой доход вырос на " + incrementOfMashaSalary + " рублей");
